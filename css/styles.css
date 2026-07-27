@@ -48,12 +48,15 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1abc9c, #16a085);
+    /* Superposición oscura + imagen de fondo */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 6rem 1rem; /* Un poco más de espacio vertical */
 }
-
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
