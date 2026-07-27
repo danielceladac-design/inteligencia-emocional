@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Emocional</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">MenteEmocional</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#pilares">Pilares</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <h1>Descubre y Desarrolla tu Inteligencia Emocional</h1>
+        <p>Aprende a reconocer, entender y gestionar tus emociones para mejorar tus relaciones y bienestar.</p>
+    </section>
+
+    <section id="pilares" class="content-section">
+        <h2>Pilares de la Inteligencia Emocional</h2>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Buscar pilar o tema...">
+        </div>
+
+        <div class="cards-container" id="cardsContainer">
+            <article class="card" data-title="autoconocimiento">
+                <h3>1. Autoconocimiento</h3>
+                <p>La habilidad de reconocer y entender tus propias emociones, tu estado de ánimo y cómo estos afectan a las personas a tu alrededor.</p>
+            </article>
+
+            <article class="card" data-title="autorregulacion">
+                <h3>2. Autorregulación</h3>
+                <p>La capacidad de controlar o redirigir impulsos y estados de ánimo perjudiciales. Pensar antes de actuar.</p>
+            </article>
+
+            <article class="card" data-title="motivacion">
+                <h3>3. Motivación</h3>
+                <p>La pasión por trabajar por razones que van más allá del dinero o el estatus, persiguiendo metas con energía y persistencia.</p>
+            </article>
+
+            <article class="card" data-title="empatia">
+                <h3>4. Empatía</h3>
+                <p>La habilidad para entender la estructura emocional de otras personas y tratar a la gente según sus reacciones emocionales.</p>
+            </article>
+
+            <article class="card" data-title="habilidades sociales">
+                <h3>5. Habilidades Sociales</h3>
+                <p>La pericia en la gestión de relaciones y en la construcción de redes, encontrando puntos en común y creando afinidad.</p>
+            </article>
+        </div>
+    </section>
+
+    <section id="quiz" class="content-section quiz-section">
+        <h2>Quiz: ¿Qué tan desarrollada está tu Empatía?</h2>
+        <form id="quizForm">
+            <div class="question">
+                <p>1. Cuando un amigo pasa por un mal momento, ¿sueles ponerte en su lugar antes de opinar?</p>
+                <label><input type="radio" name="q1" value="3"> Casi siempre</label><br>
+                <label><input type="radio" name="q1" value="2"> A veces</label><br>
+                <label><input type="radio" name="q1" value="1"> Rara vez</label>
+            </div>
+            
+            <div class="question">
+                <p>2. ¿Te resulta fácil identificar cuando alguien a tu alrededor está molesto aunque no lo diga?</p>
+                <label><input type="radio" name="q2" value="3"> Sí, fácilmente</label><br>
+                <label><input type="radio" name="q2" value="2"> A veces me cuesta</label><br>
+                <label><input type="radio" name="q2" value="1"> Casi nunca me doy cuenta</label>
+            </div>
+
+            <button type="button" onclick="calcularQuiz()">Ver Resultado</button>
+        </form>
+        <div id="quizResult" class="result"></div>
+    </section>
+
+    <section id="contacto" class="content-section">
+        <h2>Contacto</h2>
+        <form id="contactForm" onsubmit="enviarContacto(event)">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        <div id="formFeedback" class="result"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Proyecto Inteligencia Emocional</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
